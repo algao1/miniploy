@@ -9,8 +9,8 @@ tasks:
     run:
         cmds:
         - docker build -t timer .
-        - docker stop timer
-        - docker rm timer
+        - docker stop timer || true
+        - docker rm timer || true
         - docker run -d --name timer timer
     test:
         cmds:
