@@ -16,7 +16,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
-          user: ${{ secrets.SSH_USER }}
+          username: ${{ secrets.SSH_USERNAME }}
 
           script: |
             git clone git@github.com:algao1/miniploy.git
