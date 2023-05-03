@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+    GREETING: Hello, World!
+
+tasks:
+    run:
+        cmds:
+        - docker build -t timer .
+        - docker stop timer
+        - docker rm timer
+        - docker run -d --name timer timer
+    test:
+        cmds:
+        - go test ./...
